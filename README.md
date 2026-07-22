@@ -23,7 +23,29 @@ policy, 5 risk-prioritized specific policies, an operational
 onboarding/offboarding procedure, and a clinical staff work instruction
 for handling patient records.
 
-### 2. Security Incident Management Plan
+### 2. TPRM Vendor Risk Assessment
+
+**File:** `TPM_Vendor_Risk_Assessment.pdf`
+
+A complete third-party risk assessment for **TecnoSoluciones IT S.L.**, CloudHealth's external IT managed services provider. This vendor has full administrative/privileged access to all systems — including patient health records, user accounts, and infrastructure.
+
+**Assessment methodology:**
+- Inherent risk scored across 5 categories (Data Sensitivity, Access Level, Business Criticality, Regulatory Exposure, Supply Chain Dependency)
+- Residual risk evaluated using NIST CSF 2.0 functions (Govern, Identify, Protect, Detect, Respond, Recover)
+- Risk treatment decision framework (Mitigate/Accept/Transfer/Terminate)
+- Remediation roadmap with P0/P1/P2/P3 prioritization
+
+**Key findings:**
+
+| Metric | Score |
+|--------|-------|
+| Inherent Risk | CRITICAL (23/25) |
+| Residual Risk | HIGH (11/30) |
+| Recommendation | MITIGATE — update contract, require MFA, deploy monitoring |
+
+**Direct connection:** This assessment builds directly on Policy #4 (Vendor Management) from the Security Documentation Framework, providing the detailed risk analysis and specific remediation actions that the policy required.
+
+### 3. Security Incident Management Plan
 *(see below)*
 
 A 7-phase incident response lifecycle (Preparation → Detection →
