@@ -32,16 +32,6 @@ CloudHealth's external IT managed services provider — a vendor with full
 administrative/privileged access to all systems, including patient
 health records, user accounts, and infrastructure.
 
-**Assessment methodology:**
-- Inherent risk scored across 5 categories: Data Sensitivity, Access
-  Level, Business Criticality, Regulatory Exposure, and Supply Chain
-  Dependency
-- Residual risk evaluated using NIST CSF 2.0 functions (Govern, Identify,
-  Protect, Detect, Respond, Recover)
-- Risk treatment decision framework (Mitigate / Accept / Transfer /
-  Terminate)
-- Remediation roadmap prioritized by severity (P0–P3)
-
 **Key findings:**
 
 | Metric | Result |
@@ -50,13 +40,32 @@ health records, user accounts, and infrastructure.
 | Residual Risk | **HIGH** (11/30) |
 | Recommendation | **MITIGATE** — update contract, require MFA, deploy monitoring |
 
-**Direct connection:** this assessment builds directly on **Policy #4
-(Vendor Management)** from the Security Documentation Framework above,
-providing the detailed risk analysis and specific remediation actions
-that policy called for but didn't itself contain — showing the two
-documents work as a connected system rather than standalone exercises.
+**Direct connection:** builds on **Policy #4 (Vendor Management)** from
+the Security Documentation Framework, providing the detailed risk
+analysis that policy called for but didn't itself contain.
 
-### 3. Security Incident Management Plan
+### 3. [Internal Audit Simulation](./Internal_Audit_Simulation.pdf)
+A control-testing audit of 10 controls sampled across all 5 policies in
+the Security Documentation Framework — each evaluated with a test
+procedure, requested evidence, and a documented finding, not just a
+pass/fail opinion.
+
+**Key findings:**
+
+| Metric | Result |
+|---|---|
+| Compliance Score | **9/20 (45%)** — overall rating: Insufficient |
+| Conforme | 3 of 10 controls |
+| Parcialmente Conforme | 3 of 10 controls |
+| No Conforme | 4 of 10 controls |
+
+**Direct connection:** 2 of the 4 failed controls tie back to earlier
+findings — personal USB use (originally flagged as a HIGH vulnerability
+in the framework's risk analysis) and the missing vendor security SLA
+(already identified in the TPRM assessment above) — showing that
+documenting a policy isn't the same as enforcing it.
+
+### 4. Security Incident Management Plan
 *(see below)*
 
 A 7-phase incident response lifecycle (Preparation → Detection →
@@ -86,15 +95,13 @@ NIST SP 800-61.
 ---
 
 ## Coming next in this scenario
-- **Internal Audit Simulation** — testing 10 controls from the security
-  framework, evaluating evidence, and documenting findings
 - **NIST CSF 2.0 Maturity Mapping** — assessing CloudHealth's current
   controls against the 6 CSF functions (Govern, Identify, Protect,
   Detect, Respond, Recover), extending the framework already applied in
   the vendor risk assessment
 - **Risk Register with Heat Map** — a structured 5×5 likelihood/impact
-  risk register formalizing the risks identified across both documents
-  above
+  risk register formalizing the risks identified across the framework,
+  the vendor assessment, and the internal audit above
 
 ## Skills demonstrated
 - ISO/IEC 27001-aligned security framework design
@@ -102,6 +109,8 @@ NIST SP 800-61.
 - Third-party/vendor risk assessment (TPRM) methodology
 - Inherent vs. residual risk scoring, risk treatment decision-making
 - NIST CSF 2.0 function-based control evaluation
+- Internal audit control testing: test procedures, evidence evaluation,
+  findings documentation
 - Risk-based policy prioritization and remediation roadmapping
 - Operational procedure design (identity lifecycle management)
 - Incident response lifecycle planning
